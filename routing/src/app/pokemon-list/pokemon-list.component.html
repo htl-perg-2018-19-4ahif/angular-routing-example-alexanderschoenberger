@@ -1,0 +1,2 @@
+Search:<input type="text" (change)="searchChanged($event.target.value)">
+<ul *ngFor="let pokemon of pokemons;let i=index"><a routerLink="{{i+1}}" [hidden]="!pokemon.name.includes(search)">{{pokemon.name}}</a> </ul>
