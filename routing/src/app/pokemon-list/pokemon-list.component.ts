@@ -29,7 +29,6 @@ export class PokemonListComponent implements OnInit {
 async loadPokemons() {
     let count: IList = await this.http.get<IList>('https://pokeapi.co/api/v2/pokemon').toPromise();
     this.pokemons = (await this.http.get<IList>('https://pokeapi.co/api/v2/pokemon/?limit=' + count.count).toPromise()).results;
-    console.log(this.pokemons);
   }
   searchChanged(value:string){
     this.search=value;

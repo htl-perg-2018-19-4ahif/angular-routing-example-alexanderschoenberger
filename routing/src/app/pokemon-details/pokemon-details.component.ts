@@ -30,6 +30,5 @@ export class PokemonDetailsComponent implements OnInit {
   }
   async loadDetail() {
     this.abilities = (await this.http.get<IDetails>(`https://pokeapi.co/api/v2/pokemon/${this.pokemonID}/`).toPromise());
-    console.log(this.abilities);
   }
 }
